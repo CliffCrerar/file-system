@@ -1,27 +1,45 @@
 # FileSystem
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+TODO: Introduction
 
-## Development server
+# Prerequisites
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+TODO:
 
-## Code scaffolding
+# Run in dev
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Steps:
 
-## Build
+1. Clone this repo:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+	- `git clone https://github.com/CliffCrerar/file-system.git file-system`
 
-## Running unit tests
+2. Change to the file system directory:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+	- `cd file-system`
 
-## Running end-to-end tests
+3. Run the `npm` command to start the app:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+	- `npm run dev`
 
-## Further help
+> The `npm run dev` command builds both the `api` (express server) and the `app` (angular front end) to the `dist` directory in the root of the project and runs both components in `watch` mode. 
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+4. Now all the components are running in watch mode and code changes will rebuild each of the two components (api & app). To start the application and view it in the browser run:
+
+	- `npm start`
+
+> default port is 3000
+
+# Containerization
+
+Container image is created using a multi stage approach as per the below graph.
+
+![Multi Stage Container Build Diagram](/src/assets/mscb.png)
+
+1. The base container pulled from [Docker hub](https://hub.docker.com/_/node/).
+2. The staging container is created from the base container.
+3. The build container is created from the build container.
+4. Only the build artifact is taken from the build container, leaving behind all the fluff and keeping the container to be published to the registry with only the files needed to run the app.
+5. The container is published to the container registry in duplicate. Replacing the existing container with latest tag and the duplicate carrying the build number for redundancy and history.
+
+
