@@ -1,0 +1,9 @@
+<mat-card>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let dirItem of content | async">
+        <div>{{dirItem.fileName}}</div>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

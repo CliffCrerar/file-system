@@ -1,64 +1,66 @@
 {
-	"name": "file-system",
-	"version": "0.0.1-alpha",
-	"scripts": {
-		"ng": "ng",
-		"start": "node dist",
-		"build:app": "ng build",
-		"dev:app": "ng build --watch --configuration development",
-		"test": "ng test",
-		"build:server": "webpack build",
-		"dev:server": "webpack watch --config webpack.config.js --env development",
-		"dev": "concurrently \"npm run dev:server\" \"npm run dev:app\""
-	},
-	"private": true,
-	"dependencies": {
-		"@angular/animations": "^16.2.0",
-		"@angular/common": "^16.2.0",
-		"@angular/compiler": "^16.2.0",
-		"@angular/core": "^16.2.0",
-		"@angular/forms": "^16.2.0",
-		"@angular/platform-browser": "^16.2.0",
-		"@angular/platform-browser-dynamic": "^16.2.0",
-		"@angular/router": "^16.2.0",
-		"dotenv": "^16.3.1",
-		"rxjs": "~7.8.0",
-		"tslib": "^2.3.0",
-		"zone.js": "~0.13.0"
-	},
-	"devDependencies": {
-		"@angular-devkit/build-angular": "^16.2.0",
-		"@angular/cli": "~16.2.0",
-		"@angular/compiler-cli": "^16.2.0",
-		"@types/jasmine": "~4.3.0",
-		"body-parser": "^1.20.2",
-		"concurrently": "^8.2.0",
-		"cors": "^2.8.5",
-		"express": "^4.18.2",
-		"jasmine-core": "~4.6.0",
-		"karma": "~6.4.0",
-		"karma-chrome-launcher": "~3.2.0",
-		"karma-coverage": "~2.2.0",
-		"karma-jasmine": "~5.1.0",
-		"karma-jasmine-html-reporter": "~2.1.0",
-		"ts-loader": "^9.4.4",
-		"typescript": "~5.1.3",
-		"webpack": "^5.88.2",
-		"webpack-cli": "^5.1.4"
-	},
-	"description": "TODO: Introduction",
-	"main": "tsconfig.json",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/CliffCrerar/file-system.git"
-	},
-	"author": {
-		"name": "Cliff Crerar",
-		"email": "cliff.crerar@gmail.com"
-	},
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/CliffCrerar/file-system/issues"
-	},
-	"homepage": "https://github.com/CliffCrerar/file-system#readme"
+  "name": "file-system",
+  "version": "0.0.1-alpha",
+  "scripts": {
+    "ng": "ng",
+    "start": "node dist",
+    "build:app": "ng build",
+    "dev:app": "ng build --watch --configuration development",
+    "test": "ng test",
+    "build:server": "webpack build",
+    "dev:server": "webpack watch --config webpack.config.js --env development",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:app\""
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^16.2.0",
+    "@angular/cdk": "^16.2.1",
+    "@angular/common": "^16.2.0",
+    "@angular/compiler": "^16.2.0",
+    "@angular/core": "^16.2.0",
+    "@angular/forms": "^16.2.0",
+    "@angular/material": "^16.2.1",
+    "@angular/platform-browser": "^16.2.0",
+    "@angular/platform-browser-dynamic": "^16.2.0",
+    "@angular/router": "^16.2.0",
+    "dotenv": "^16.3.1",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.13.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^16.2.0",
+    "@angular/cli": "~16.2.0",
+    "@angular/compiler-cli": "^16.2.0",
+    "@types/jasmine": "~4.3.0",
+    "body-parser": "^1.20.2",
+    "concurrently": "^8.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "jasmine-core": "~4.6.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "ts-loader": "^9.4.4",
+    "typescript": "~5.1.3",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  },
+  "description": "TODO: Introduction",
+  "main": "tsconfig.json",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CliffCrerar/file-system.git"
+  },
+  "author": {
+    "name": "Cliff Crerar",
+    "email": "cliff.crerar@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CliffCrerar/file-system/issues"
+  },
+  "homepage": "https://github.com/CliffCrerar/file-system#readme"
 }
