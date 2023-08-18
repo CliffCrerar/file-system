@@ -3,7 +3,7 @@
 #
 
 # Get base container from dockerhub
-FROM node:18-alpine as base
+FROM node:18-slim as base
 
 #
 # Stage 1
@@ -26,12 +26,11 @@ RUN npm install
 
 FROM stage as build
 WORKDIR /build
-
 # Copy files from project
 COPY . .
 # Build components
-RUN npm build:server
-RUN npm build:app
+RUN npm run build:server
+RUN npm run build:app
 
 #
 # Stage 3
@@ -41,6 +40,9 @@ RUN npm build:app
 FROM base as final
 WORKDIR /app
 COPY --from=build /build/dist .
+EXPOSE 443
+EXPOSE 80
+EXPOSE 3000
 CMD ["node", "."]
 
 
